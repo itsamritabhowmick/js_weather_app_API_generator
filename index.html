@@ -16,7 +16,7 @@
     </p>
 
     <main
-      class="container d-flex justify-content-center align-items-center my-3 p-5"
+      class="container d-flex justify-content-center align-items-center flex-column my-5 p-5"
     >
       <div
         class="card pt-4 mw-100"
@@ -44,8 +44,8 @@
         <!-- end of search-button -->
       </div>
 
-      <div id="weather-display" class="card d-none">
-        <div class="container">
+      <div id="weather-display" class="card d-none mt-5">
+        <div class="container py-3" id="city-row">
           <div class="row">
             <!-- .............................Column 1 start ......................... -->
             <!-- for left-hand side , here present city, temperature and feels like-->
@@ -53,13 +53,15 @@
               <!-- row 1 of col 1 -->
               <div class="row">
                 <div class="col">
-                  <h5 id="city"></h5>
+                  <h5 id="city" class="text-center"></h5>
                 </div>
               </div>
 
               <!-- row 2 of col 1 -->
-              <div class="row">
-                <div class="col">
+              <div class="row text-center">
+                <div
+                  class="col d-flex justify-content-around align-items-center flex-column"
+                >
                   <div>
                     <h5 class="fs-1"><span id="temp-val"></span>°C</h5>
                     <span id="max-temp-val"></span>/<span
@@ -82,7 +84,7 @@
             <div class="col">
               <div class="row">
                 <div class="col">
-                  <h5>
+                  <h5 id="desc" class="text-center">
                     <span id="desc-val"></span>-<span
                       id="detailed-desc-val"
                     ></span>
@@ -90,12 +92,16 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col">
+              <div class="row text-center">
+                <div
+                  class="col col d-flex justify-content-around align-items-center flex-column"
+                >
                   <h5><span id="humidity-val"></span>%</h5>
                   <span>Humidity</span>
                 </div>
-                <div class="col">
+                <div
+                  class="col col d-flex justify-content-around align-items-center flex-column"
+                >
                   <h5 class="fs-1"><span id="wind-speed-val"></span>m/s</h5>
                   <span>wind speed</span>
                 </div>
