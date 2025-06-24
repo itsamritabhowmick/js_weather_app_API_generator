@@ -1,5 +1,15 @@
 async function fetchForecast() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=b01c274927b7aea00a57575726d26af12`;
+  const cityH5 = document.querySelector("#city");
+  const tempSpan = document.querySelector("#temp-val");
+  const maxTempSpan = document.querySelector("#max-temp-val");
+  const minTempSpan = document.querySelector("#min-temp-val");
+  const flSpan = document.getElementById("fl-val");
+  const descSpan = document.querySelector("#desc-val");
+  const detailedDescSpan = document.querySelector("#detailed-desc-val");
+  const humiditySpan = document.querySelector("#humidity-val");
+  const windSpeedSpan = document.querySelector("#wind-speed-val");
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=b01c274927b7aea00a57575726d26af1`;
   const res = await fetch(url);
   const data = await res.json();
   try {
@@ -42,13 +52,3 @@ btn.addEventListener("click", (e) => {
   result.classList.remove("d-none");
   fetchForecast();
 });
-
-const cityH5 = document.querySelector("#city");
-const tempSpan = document.querySelector("#temp-val");
-const maxTempSpan = document.querySelector("#max-temp-val");
-const minTempSpan = document.querySelector("#min-temp-val");
-const flSpan = document.getElementById("fl-val");
-const descSpan = document.querySelector("#desc-val");
-const detailedDescSpan = document.querySelector("#detailed-desc-val");
-const humiditySpan = document.querySelector("#humidity-val");
-const windSpeedSpan = document.querySelector("#wind-speed-val");
